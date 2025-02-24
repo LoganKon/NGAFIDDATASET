@@ -37,9 +37,10 @@ class NGAFID_Dataset_Downloader:
             gdown.download(url, output, quiet=False)
 
         if extract:
+            print(ngafid_urls)
             logger.info('Extracting File')
             _ = tarfile.open(output).extractall(destination)
-        print(destination)
+
 
         return name, destination
 
