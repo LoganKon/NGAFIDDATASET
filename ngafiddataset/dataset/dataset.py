@@ -39,7 +39,7 @@ class NGAFID_Dataset_Downloader:
         if extract:
             
             logger.info('Extracting File')
-            _ = tarfile.open(output, 'r:gz').extractall(destination)
+            _ = tarfile.open(output, 'w:gz').extractall(destination)
 
 
         return name, destination
